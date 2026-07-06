@@ -113,7 +113,7 @@
     <a href="#">Dashboard</a>
     <a href="#">Profile</a>
     <a href="#">Settings</a>
-    <a href="#">Logout</a>g
+    <a href="#">Logout</a>
   </div>
 
   <!-- Chat -->
