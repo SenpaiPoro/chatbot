@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include ('include/header.php'); ?>
 <body>
-    
-</body>
-</html>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="#">Dashboard</a>
+    <a href="profile.php">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+  </div>
