@@ -1,5 +1,5 @@
-<?php include ('include/header.php'); ?>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar">
     <h2>Menu</h2>
     <a href="#">Dashboard</a>
@@ -7,3 +7,4 @@
     <a href="#">Settings</a>
     <a href="#">Logout</a>
   </div>
+
