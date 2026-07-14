@@ -8,3 +8,6 @@ if (isset($_POST['message'])) {
     $reply = $bot->getResponse($_POST['message']);
     echo json_encode(["reply" => $reply]);
 }
+
+
+?>
