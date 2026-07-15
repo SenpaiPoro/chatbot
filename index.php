@@ -12,4 +12,5 @@
       <button>Send</button>
     </div>
   </div>
+<?php include ('include/footer.php'); ?>
 
