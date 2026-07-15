@@ -12,5 +12,4 @@
       <button>Send</button>
     </div>
   </div>
-</body>
-</html>
+
