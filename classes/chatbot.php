@@ -1,7 +1,6 @@
 <?php
 class Chatbot {
     private $defaultResponse = "Sorry, I don’t understand. Please contact support.";
-
     public function getResponse(string $message): string {
         $msg = strtolower(trim($message));
 
@@ -12,7 +11,6 @@ class Chatbot {
         } elseif (strpos($msg, "refund") !== false) {
             return "Refunds are processed within 5 business days. Need help? Call us at +1800123456.";
         }
-
         return $this->defaultResponse;
     }
 }
