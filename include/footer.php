@@ -1,6 +1,3 @@
-
-
-
-<script src="js/asset.js"></script>
+<script src="assets/asset.js"></script>
 </body>
 </html>
