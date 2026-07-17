@@ -1,5 +1,5 @@
 <?php
-class Chatbot {
+class chatbot {
     private $defaultResponse = "Sorry, I don’t understand. Please contact support.";
     public function getResponse(string $message): string {
         $msg = strtolower(trim($message));
