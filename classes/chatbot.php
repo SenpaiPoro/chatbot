@@ -13,7 +13,6 @@ class Chatbot {
             $this->responses[strtolower($row['keyword'])] = $row['reply'];
         }
     }
-
     public function getResponse(string $message): string {
         $msg = strtolower(trim($message));
         foreach ($this->responses as $keyword => $reply) {

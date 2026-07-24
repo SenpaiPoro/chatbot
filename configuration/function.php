@@ -1,11 +1,11 @@
 <?php
 session_start();
-require 'dbcon.php';
+require 'connection.php';
 
 function validate($inputData)
 {
-    global $connection;
-    $validatedData = mysqli_real_escape_string($connection, $inputData);
+    global $conn;
+    $validatedData = mysqli_real_escape_string($conn, $inputData);
     return trim($validatedData);
 }
 
