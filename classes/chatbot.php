@@ -7,7 +7,7 @@ class Chatbot {
         $this->loadResponsesFromDB();
     }
     private function loadResponsesFromDB(): void {
-        include __DIR__ . '/../db_connect.php';
+        include __DIR__ . '/../connection.php';
         $result = $conn->query("SELECT keyword, reply FROM chatbot_responses");
         while($row = $result->fetch_assoc()){
             $this->responses[strtolower($row['keyword'])] = $row['reply'];
