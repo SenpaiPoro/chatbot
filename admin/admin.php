@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__  . '../classes/chatbot.php';   
+require_once __DIR__  . '../classes/chatbot.php';  
 include '../configuration/connection.php'; // your DB connection
 
 // Handle form submission
