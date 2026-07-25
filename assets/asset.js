@@ -17,7 +17,7 @@
       appendMessage(message, "user");
       input.value = "";
 
-      fetch("chat.php", {
+      fetch("../chat.php", {
         method: "POST",
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
         body: "message=" + encodeURIComponent(message)
