@@ -8,14 +8,14 @@ if(isset($_POST['add'])){
     $reply   = trim($_POST['reply']);
 
     if($keyword != '' && $reply != ''){
-        $stmt = $conn->prepare("INSERT INTO chatbot_responses (keyword, reply) VALUES (?, ?)");
+        $stmt = $connection->prepare("INSERT INTO chatbot_responses (keyword, reply) VALUES (?, ?)");
         $stmt->bind_param("ss", $keyword, $reply);
         $stmt->execute();
     }
 }
 
 // Fetch all responses
-$responses = $conn->query("SELECT * FROM chatbot_responses");
+$responses = $connection->query("SELECT * FROM chatbot_responses");
 ?>
 <!DOCTYPE html>
 <html lang="en">
