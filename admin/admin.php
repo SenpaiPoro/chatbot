@@ -41,7 +41,9 @@ $responses = $connection->query("SELECT * FROM chatbot_responses");
     <textarea name="reply" required></textarea>
     <button type="submit" name="add">Add Response</button>
   </form>
-
+  <?php 
+    if ($responses->num_rows > 0) {
+  ?>
   <h3>Existing Responses</h3>
   <table>
     <tr><th>ID</th><th>Keyword</th><th>Reply</th></tr>
@@ -52,6 +54,13 @@ $responses = $connection->query("SELECT * FROM chatbot_responses");
         <td><?= htmlspecialchars($row['reply']) ?></td>
       </tr>
     <?php endwhile; ?>
+    <?php 
+    }
+    else {
+        echo "<tr><td colspan='3'>No responses found.</td></tr>";
+    }
+
+    ?>
   </table>
 </body>
 </html>
