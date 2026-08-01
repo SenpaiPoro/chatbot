@@ -13,26 +13,20 @@ if(isset($_POST['add'])){
         $stmt->execute();
     }
 }
-
 // Fetch all responses
 $responses = $connection->query("SELECT * FROM chatbot_responses");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chatbot Admin Panel</title>
+<?php include 'include/header.php'; ?>
   <style>
-    body { font-family: 'Oswald', sans-serif; background:#f4f6f9; padding:20px; }
-    table { width:100%; border-collapse: collapse; margin-top:20px; }
+    body { font-family: 'Oswald', sans-serif; background:#f4f6f9;}
+    form { padding: 20px;}
+    table { width:100%; border-collapse: collapse; margin-top:20px; padding:20px; }
     th, td { border:1px solid #ddd; padding:10px; text-align:left; }
     th { background:#007bff; color:#fff; }
     input, textarea { width:100%; padding:8px; margin:5px 0; }
     button { padding:10px 15px; background:#007bff; color:#fff; border:none; cursor:pointer; }
     button:hover { background:#0056b3; }
   </style>
-</head>
-<body>
   <h2>Chatbot Admin Panel</h2>
   <form method="POST">
     <label>Keyword:</label>
