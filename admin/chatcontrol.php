@@ -40,10 +40,9 @@ $responses = $connection->query("SELECT * FROM chatbot_responses");
   ?>
   <h3>Existing Responses</h3>
   <table>
-    <tr><th>ID</th><th>Keyword</th><th>Reply</th></tr>
+    <tr><th>Keyword</th><th>Reply</th></tr>
     <?php while($row = $responses->fetch_assoc()): ?>
       <tr>
-        <td><?= $row['id'] ?></td>
         <td><?= htmlspecialchars($row['keyword']) ?></td>
         <td><?= htmlspecialchars($row['reply']) ?></td>
       </tr>
