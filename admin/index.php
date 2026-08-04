@@ -11,7 +11,7 @@
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
                                 <h2 class="fs-4 fw-bold">Chat Control</h2>
                                 </a>
-                                <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p>
+                                <p class="mb-0">Control chat interactions in real-time with the Costumers</p>
                             </div>
                         </div>
                     </div>
@@ -19,8 +19,8 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <h2 class="fs-4 fw-bold">Free to download</h2>
-                                <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
+                                <h2 class="fs-4 fw-bold">Hotel Management</h2>
+                                <p class="mb-0">Manage your hotel's operations efficiently with our comprehensive management tools.</p>
                             </div>
                         </div>
                     </div>
