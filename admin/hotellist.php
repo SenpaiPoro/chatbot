@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'include/header.php'; ?>
 
 
         <!-- Start of  Content -->
@@ -17,5 +17,5 @@
                                 <p class="mb-0">Manage your hotel's operations efficiently with our comprehensive management tools.</p>
                             </div>
                         </div>
-                        
-<?php include 'footer.php'; ?>
+
+<?php include 'include/footer.php'; ?>
