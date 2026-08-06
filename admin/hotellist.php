@@ -1,21 +1,58 @@
 <?php include 'include/header.php'; ?>
 
 
-        <!-- Start of  Content -->
-        <section class="py-5">
-            <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                    </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <h2 class="fs-4 fw-bold">Hotel Management</h2>
-                                <p class="mb-0">Manage your hotel's operations efficiently with our comprehensive management tools.</p>
-                            </div>
-                        </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4><b>Resume Management</b></h4>
+                  <br>
+                    <a href="resume.php" class="btn btn-primary float-end"> Add Experience </a>
+                </h4> 
+            </div>
+        </div>
+        <div class="card-body">
+        <form method="GET" action="">
+            <div class="input-group input-group-sm mb-3">
+</div>
+</form>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>title</th>
+                        <th>Address</th>
+                        <th>Description</th>
+                        <th>Year</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
 
+                              <tr>
+                                   <td> <?= htmlspecialchars($DataList['type']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['title']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['address']); ?></td>
+                                    <td> <p class="d-inline-block text-truncate" style="max-width: 170px;"> <?= htmlspecialchars($DataList['description']); ?></p></td>
+                                    <td> <?= htmlspecialchars($DataList['year']); ?></td>
+                                <td> 
+                                <a href="resume_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
+                                <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
+                                 onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
+                            </td>
+                    </tr>
+ 
+                            <tr>
+                                <td colspan="4">
+                                    No Record!
+                                </td>
+                            </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 <?php include 'include/footer.php'; ?>
