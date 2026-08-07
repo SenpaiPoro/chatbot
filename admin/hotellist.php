@@ -19,24 +19,18 @@
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Type</th>
                         <th>Name</th>
-                        <th>title</th>
                         <th>Address</th>
-                        <th>Description</th>
-                        <th>Year</th>
+                        <th>Code</th>                        
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody class="table-hover">
 
                               <tr>
-                                   <td> <?= htmlspecialchars($DataList['type']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['name']); ?></td>
-                                    <td> <?= htmlspecialchars($DataList['title']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['address']); ?></td>
-                                    <td> <p class="d-inline-block text-truncate" style="max-width: 170px;"> <?= htmlspecialchars($DataList['description']); ?></p></td>
-                                    <td> <?= htmlspecialchars($DataList['year']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['code']); ?></td>
                                 <td> 
                                 <a href="resume_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
                                 <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
