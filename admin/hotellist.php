@@ -12,10 +12,6 @@
             </div>
         </div>
         <div class="card-body">
-        <form method="GET" action="">
-            <div class="input-group input-group-sm mb-3">
-</div>
-</form>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
