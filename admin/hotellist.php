@@ -5,9 +5,9 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4><b>Resume Management</b></h4>
+                <h4><b>Hotel</b></h4>
                   <br>
-                    <a href="resume.php" class="btn btn-primary float-end"> Add Experience </a>
+                    <a href="hotel_add.php" class="btn btn-primary float-end"> Add Hotel </a>
                 </h4> 
             </div>
         </div>
