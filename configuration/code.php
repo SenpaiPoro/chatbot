@@ -11,8 +11,10 @@ if(isset($_POST['add'])){
         $stmt->bind_param("ss", $keyword, $reply);
         $stmt->execute();
     }
+    $responses = $conn->query("SELECT * FROM chatbot_responses");
 }
-$responses = $conn->query("SELECT * FROM chatbot_responses");
+
+
 
 
 ?>

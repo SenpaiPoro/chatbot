@@ -29,7 +29,7 @@
                                 <td>
                                     <a href="resume_edit.php?id=<?= $DataList['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                     <a href="include/deleteresume.php?id=<?= $DataList['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this experience?');">Delete</a>
-                                </td>
+                                </td>   
                             </tr>
                             <tr>
                                 <td colspan="4">No Record!</td>
