@@ -13,7 +13,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
@@ -29,4 +29,5 @@
             </div>
         </nav>
 
+        <main class="flex-fill">
 
