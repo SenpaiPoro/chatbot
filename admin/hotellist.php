@@ -7,7 +7,9 @@
             <div class="card-header">
                 <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
                     <h4 class="mb-0"><strong>Hotel</strong></h4>
-                    <a href="addhotel.php" class="btn btn-primary">Add Hotel</a>
+<div class="text-end">
+                        <a href="index.php" class="btn btn-outline-secondary btn-sm">Back</a>
+                    </div>                    <a href="addhotel.php" class="btn btn-primary">Add Hotel</a>
                 </div>
             </div>
             <div class="card-body">
