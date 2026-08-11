@@ -6,7 +6,7 @@
                 <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
                     <h4 class="mb-0"><strong>Hotel</strong></h4>
 <div class="text-start">
-                        <a href="index.php" class="btn btn-outline-secondary btn-sm">Back</a>
+                        <a href="index.php" class="btn btn-danger">Back</a>
                         <a href="addhotel.php" class="btn btn-primary">Add Hotel</a>
                     </div>
                 </div>
