@@ -1,8 +1,8 @@
 
 <?php 
-require_once 'include/config.php';
+require_once '../configuration/function.php';
 
-
+$DataList = GetData('chatbot_responses');
 
 ?>
 <!DOCTYPE html>
