@@ -13,13 +13,7 @@ function GetData($table)
 {
     global $connection;
     // sanitize table name to prevent injection (allow letters, numbers, underscore)
-    $table = preg_replace('/[^a-zA-Z0-9_]/', '', $table);
-    $sql = "SELECT * FROM `" . $table . "`";
-    $stmt = $connection->prepare($sql);
-    if (!$stmt) {
-        return false;
-    }
-    $stmt->execute();
-    return $stmt->get_result();
+    $sql = "SELECT * FROM $table"; 
+        return mysqli_query($connection, $sql);    $stmt = $connection->prepare($sql);
 }
 ?>
