@@ -8,7 +8,7 @@
                         <p class="lead">Manage user accounts and permissions with ease.</p>
                     </div>
                     <div class="text-end">
-                        <a href="index.php" class="btn btn-outline-secondary btn-sm">Back</a>
+                        <a href="index.php" class="btn btn-danger btn-sm">Back</a>
                     </div>
                 </div>
             </div>
