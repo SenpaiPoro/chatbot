@@ -20,7 +20,7 @@
                         <label for="code">Code</label>
                         <input type="text" class="form-control" id="code" name="code" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Hotel</button>
+                    <button type="submit" class="btn btn-primary" name="add_hotel">Add Hotel</button>
                 </form>
             </div>
         </div>
