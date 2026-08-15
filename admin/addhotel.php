@@ -7,7 +7,7 @@
                 <h4 class="mb-0"><strong>Add Hotel</strong></h4>
             </div>
             <div class="card-body">
-                <form action="include/addhotel.php" method="POST">
+                <form action="../configuration/code.php" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
