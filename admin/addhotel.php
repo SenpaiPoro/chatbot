@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center px-4 py-3">
                     <h4 class="mb-4"><strong>Hotel Registration</strong></h4>
                 <div class="text-start mb-0">
                    <a href="hotellist.php" class="btn btn-danger">Back</a>
