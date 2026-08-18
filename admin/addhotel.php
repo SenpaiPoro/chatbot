@@ -3,7 +3,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="mb-0"><strong>Add Hotel</strong></h4>
+                <h4 class="mb-0"><strong>Add Hotel</strong></h4><div class="text-end">
+                        <a href="index.php" class="btn btn-danger">Back</a>
+                    </div>
             </div>
             <div class="card-body">
                 <form action="../configuration/code.php" method="POST">
