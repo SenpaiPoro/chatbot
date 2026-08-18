@@ -2,11 +2,12 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
-                <h4 class="mb-0"><strong>Add Hotel</strong></h4><div class="text-end">
-                        <a href="index.php" class="btn btn-danger">Back</a>
-                    </div>
-            </div>
+         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                    <h4 class="mb-4"><strong>Hotel Registration</strong></h4>
+                <div class="text-start mb-0">
+                   <a href="hotellist.php" class="btn btn-danger">Back</a>
+                </div>
+                </div>
             <div class="card-body">
                 <form action="../configuration/code.php" method="POST">
                     <div class="form-group">
