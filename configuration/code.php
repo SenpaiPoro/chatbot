@@ -11,7 +11,7 @@ if(isset($_POST['add'])){
         $stmt->bind_param("ss", $keyword, $reply);
         $stmt->execute();
     }
-    $responses = $conn->query("SELECT * FROM chatbot_responses");
+    $responses = $connection->query("SELECT * FROM chatbot_responses");
 }
 
 
@@ -21,9 +21,17 @@ if(isset($_POST['add_hotel'])){
     $code = trim($_POST['code']);
 
     if($name != '' && $address != '' && $code != ''){
-        $stmt = $conn->prepare("INSERT INTO hotels (name, address, code) VALUES (?, ?, ?)");
+        $stmt = $connection->prepare("INSERT INTO hotels (name, address, code) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $address, $code);
         $stmt->execute();
+    }else{
+        echo '<script>alert("Please fill in all fields.");</script>';
+    }
+
+    if($stmt->affected_rows > 0) {
+        echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
+    } else {
+        echo '<script>alert("Failed to add hotel. Please try again.");</script>';
     }
 }
 
