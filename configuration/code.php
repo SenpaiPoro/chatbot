@@ -15,6 +15,16 @@ if(isset($_POST['add'])){
 }
 
 
+if(isset($_POST['add_hotel'])){
+    $name = trim($_POST['name']);
+    $address = trim($_POST['address']);
+    $code = trim($_POST['code']);
 
+    if($name != '' && $address != '' && $code != ''){
+        $stmt = $conn->prepare("INSERT INTO hotels (name, address, code) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $address, $code);
+        $stmt->execute();
+    }
+}
 
 ?>
