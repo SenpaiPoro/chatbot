@@ -25,14 +25,17 @@ if(isset($_POST['add_hotel'])){
         $stmt->bind_param("sss", $name, $address, $code);
         $stmt->execute();
     }else{
-        echo '<script>alert("Please fill in all fields.");</script>';
+        echo '<script>alert("Please fill in all fields."); window.location.href = "../admin/addhotel.php";</script>';
     }
 
     if($stmt->affected_rows > 0) {
         echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
     } else {
-        echo '<script>alert("Failed to add hotel. Please try again.");</script>';
+        echo '<script>alert("Failed to add hotel. Please try again."); window.location.href = "../admin/addhotel.php";</script>';
     }
 }
+
+
+
 
 ?>
