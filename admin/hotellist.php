@@ -24,14 +24,14 @@
                         </thead>
                         <tbody class="table-hover">
                             <?php
-                        $Data = Getdata("chatbot_responses");
+                        $Data = Getdata("hotels");
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>
                             <tr>
-                                <td><?= htmlspecialchars( $DataList['id']); ?></td>
-                                <td><?= htmlspecialchars($DataList['keyword']); ?></td>
-                                <td><?= htmlspecialchars($DataList['reply']); ?></td>
+                                <td><?= htmlspecialchars($DataList['name']); ?></td>
+                                <td><?= htmlspecialchars($DataList['address']); ?></td>
+                                <td><?= htmlspecialchars($DataList['code']); ?></td>
                                 <td>
                                     <a href="resume_edit.php?id=<?= $DataList['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                     <a href="include/deleteresume.php?id=<?= $DataList['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this experience?');">Delete</a>
