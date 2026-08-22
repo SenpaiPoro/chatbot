@@ -35,6 +35,11 @@ if(isset($_POST['add_hotel'])){
         echo '<script>alert("Please fill in all fields. Or Code is not valid."); window.location.href = "../admin/addhotel.php";</script>';
     }
         if($stmt->affected_rows > 0) {
+
+            $hcode = $connection->prepare("INSERT INTO hotel_info (code) VALUES (?)");
+            $hcode->bind_param("s", $code);
+            $hcode->execute();
+
             echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
         } else {
             echo '<script>alert("Failed to add hotel. Please try again."); window.location.href = "../admin/addhotel.php";</script>';
