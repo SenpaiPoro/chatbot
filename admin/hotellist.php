@@ -65,6 +65,10 @@
                                            class="btn btn-success btn-sm">
                                             Edit
                                         </a>
+                                        <a href="resume_edit.php?id=<?= $DataList['id']; ?>"
+                                           class="btn btn-primary btn-sm">
+                                            View
+                                        </a>
                                         <a href="include/deleteresume.php?id=<?= $DataList['id']; ?>"
                                            class="btn btn-danger btn-sm"
                                            onclick="return confirm('Are you sure you want to delete this experience?');">
