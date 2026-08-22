@@ -21,19 +21,24 @@ if(isset($_POST['add_hotel'])){
     $code = trim($_POST['code']);
 
     if($name != '' && $address != '' && $code != ''){
-        $stmt = $connection->prepare("INSERT INTO hotels (name, address, code) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $name, $address, $code);
-        $stmt->execute();
+
+        $duplicate = $connection->query("SELECT * FROM hotels WHERE code = '$code'");
+        if ($duplicate->num_rows > 0) {
+            echo '<script>alert("Hotel with this code already exists."); window.location.href = "../admin/addhotel.php";</script>';
+            exit();
+        }else{
+            $stmt = $connection->prepare("INSERT INTO hotels (name, address, code) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $name, $address, $code);
+            $stmt->execute();
+            }
     }else{
         echo '<script>alert("Please fill in all fields."); window.location.href = "../admin/addhotel.php";</script>';
     }
-
-    if($stmt->affected_rows > 0) {
-        echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
-    } else {
-        echo '<script>alert("Failed to add hotel. Please try again."); window.location.href = "../admin/addhotel.php";</script>';
-    }
+        if($stmt->affected_rows > 0) {
+            echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
+        } else {
+            echo '<script>alert("Failed to add hotel. Please try again."); window.location.href = "../admin/addhotel.php";</script>';
+        }
 }
-
 
 ?>
