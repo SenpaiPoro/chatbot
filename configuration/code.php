@@ -20,7 +20,7 @@ if(isset($_POST['add_hotel'])){
     $address = trim($_POST['address']);
     $code = trim($_POST['code']);
 
-    if($name != '' && $address != '' && $code != ''){
+    if($name != '' && $address != '' && $code != '' && strlen($code) >2 && strlen($code) < 6){
 
         $duplicate = $connection->query("SELECT * FROM hotels WHERE code = '$code'");
         if ($duplicate->num_rows > 0) {
@@ -32,7 +32,7 @@ if(isset($_POST['add_hotel'])){
             $stmt->execute();
             }
     }else{
-        echo '<script>alert("Please fill in all fields."); window.location.href = "../admin/addhotel.php";</script>';
+        echo '<script>alert("Please fill in all fields. Or Code is not valid."); window.location.href = "../admin/addhotel.php";</script>';
     }
         if($stmt->affected_rows > 0) {
             echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';

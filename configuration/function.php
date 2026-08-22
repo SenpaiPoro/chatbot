@@ -12,7 +12,6 @@ function validate($inputData)
 function GetData($table)
 {
     global $connection;
-    // sanitize table name to prevent injection (allow letters, numbers, underscore)
     $sql = "SELECT * FROM $table"; 
         return mysqli_query($connection, $sql);  
 }
