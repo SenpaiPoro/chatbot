@@ -2,15 +2,21 @@
         <!-- Page Content-->
         <section class="pt-6 py-5 px-lg-5">
             <div class="container px-lg-7">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h1 class="mb-4">Account Control</h1>
-                        <p class="lead">Manage user accounts and permissions with ease.</p>
-                    </div>
-                    <div class="text-end">
-                        <a href="index.php" class="btn btn-danger btn-sm">Back</a>
+                <div class="card-header">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                    <h4 class="mb-0">
+                        <strong>Admin Account Control</strong>
+                    </h4>
+                    <div class="d-flex gap-2">
+                        <a href="index.php" class="btn btn-danger">
+                            Back
+                        </a>
+                        <a href="addhotel.php" class="btn btn-primary">
+                            Add Hotel
+                        </a>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <!-- End of Page Content -->

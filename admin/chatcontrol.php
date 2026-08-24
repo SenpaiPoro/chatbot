@@ -78,7 +78,6 @@ $responses = $connection->query("SELECT * FROM chatbot_responses");
     else {
         echo "<tr><td colspan='3'><h1>No data found.</h1></td></tr>";
     }
-
     ?>
   </table>
 </body>
