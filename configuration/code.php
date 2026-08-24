@@ -14,7 +14,6 @@ if(isset($_POST['add'])){
     $responses = $connection->query("SELECT * FROM chatbot_responses");
 }
 
-
 if(isset($_POST['add_hotel'])){
     $name = trim($_POST['name']);
     $address = trim($_POST['address']);
@@ -43,7 +42,7 @@ if(isset($_POST['add_hotel'])){
             echo '<script>alert("Hotel added successfully."); window.location.href = "../admin/hotellist.php";</script>';
         } else {
             echo '<script>alert("Failed to add hotel. Please try again."); window.location.href = "../admin/addhotel.php";</script>';
-        }
+            }
 }
 
 ?>

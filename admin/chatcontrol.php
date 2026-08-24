@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__  . '/../classes/chatbot.php';  
-include '../configuration/connection.php'; // your DB connection
-
+require_once __DIR__ . '/../configuration/connection.php';
 // Handle form submission
 if(isset($_POST['add'])){
     $keyword = trim($_POST['keyword']);
@@ -15,8 +14,35 @@ if(isset($_POST['add'])){
 }
 // Fetch all responses
 $responses = $connection->query("SELECT * FROM chatbot_responses");
-?>
-<?php include 'include/header.php'; ?>
+?>    
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Hotel Reservation</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="index.php">Hotel Reservation</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-fill">
   <style>
     body { font-family: 'Oswald', sans-serif; background:#f4f6f9;}
     form { padding: 20px;}

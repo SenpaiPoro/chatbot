@@ -23,8 +23,8 @@
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped table-hover table-sm mb-0 hotel-table">
                         <thead>
-                            <tr>
-                                <th class="name-column">
+                            <tr>    
+                                <th class="name-column">    
                                     Name
                                 </th>
                                 <th class="address-column">
