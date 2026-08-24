@@ -11,8 +11,8 @@
                         <a href="index.php" class="btn btn-danger">
                             Back
                         </a>
-                        <a href="addhotel.php" class="btn btn-primary">
-                            Add Hotel
+                        <a href="add_admin.php" class="btn btn-primary">
+                            Add Admin
                         </a>
                     </div>
                 </div>
