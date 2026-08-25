@@ -2,6 +2,9 @@
 <?php 
 require_once '../configuration/function.php';
 
+    $paramResult = checkId('id');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

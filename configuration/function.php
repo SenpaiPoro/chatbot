@@ -13,4 +13,18 @@ function GetData($table)
     $sql = "SELECT * FROM $table"; 
         return mysqli_query($connection, $sql);  
 }
+
+function checkId($paramName)
+{
+    if(isset($_GET[$paramName]))
+    {
+        if($_GET[$paramName] != null){
+            return $_GET[$paramName];
+        }else{
+            return 'Id Not Found';
+        }
+    }else{
+        return 'No Id Given';
+    }
+}
 ?>
