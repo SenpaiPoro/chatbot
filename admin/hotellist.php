@@ -65,7 +65,7 @@
                                            class="btn btn-success btn-sm">
                                             Edit
                                         </a>
-                                        <a href="resume_edit.php?id=<?= $DataList['id']; ?>"
+                                        <a href="hotel_view.php?id=<?= $DataList['id']; ?>"
                                            class="btn btn-primary btn-sm">
                                             View
                                         </a>

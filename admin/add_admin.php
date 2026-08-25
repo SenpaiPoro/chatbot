@@ -5,7 +5,7 @@
          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center px-4 py-3">
                     <h4 class="mb-4"><strong>Admin Registration</strong></h4>
                 <div class="text-start mb-0">
-                   <a href="adminlist.php" class="btn btn-danger">Back</a>
+                   <a href="hotellist.php" class="btn btn-danger">Back</a>
                 </div>
                 </div>
             <div class="card-body">
