@@ -1,17 +1,21 @@
 <?php include 'include/header.php'; ?>
 
 <?php
-                    $paramResult = checkId('id');
-                    
-                        $sql = "SELECT * 
-                                FROM hotels
-                                WHERE id = $paramResult ";
-                        $result = mysqli_query($connection, $sql);
-                        $row = $result->fetch_assoc();
-                       ?>
+
+$paramResult = checkId('id');
+
+if ($paramResult === null) {
+    die('Hotel ID not found.');
+}
+
+$sql = "SELECT code
+        FROM hotels
+        WHERE id = $paramResult";
+$result = mysqli_query($connection, $sql);
+
+$row = $result->fetch_assoc();
 
 ?>
-
 <div class="row">
     <div class="col-12">
         <div class="card">

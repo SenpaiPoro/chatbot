@@ -1,11 +1,5 @@
 
-<?php 
-require_once '../configuration/function.php';
-
-    $paramResult = checkId('id');
-
-
-?>
+<?php include '../configuration/function.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
