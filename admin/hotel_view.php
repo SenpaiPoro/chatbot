@@ -4,6 +4,8 @@
 
 $paramResult = checkId('id');
 
+echo $paramResult;
+
 if ($paramResult === null) {
     die('Hotel ID not found.');
 }
