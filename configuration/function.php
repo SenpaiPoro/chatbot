@@ -14,12 +14,12 @@ function GetData($table)
         return mysqli_query($connection, $sql);  
 }
 
-function checkId($paramName)
-{
-    if(isset($_GET[$paramName]))
+function checkId($paramType){
+
+    if(isset($_GET[$paramType]))
     {
-        if($_GET[$paramName] != null){
-            return $_GET[$paramName];
+        if($_GET[$paramType] != null){
+            return $_GET[$paramType];
         }else{
             return 'Id Not Found';
         }
@@ -27,4 +27,5 @@ function checkId($paramName)
         return 'No Id Given';
     }
 }
+
 ?>
