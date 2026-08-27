@@ -25,7 +25,7 @@ $row = $result->fetch_assoc();
           <!-- Left side: hotel info -->
           <div>
             <h4 class="card-title mb-1"><?php echo $row['name']; ?></h4>
-            <p class="card-text mb-0"><?php echo $row['address']; ?></p>
+            <p class="card-text mb-0"><?php echo $row['address']; ?>, <strong><?php echo $row['code']; ?></strong></p>
           </div>
           
           <!-- Right side: buttons -->
