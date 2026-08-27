@@ -30,7 +30,7 @@ $row = $result->fetch_assoc();
           
           <!-- Right side: buttons -->
           <div class="d-flex gap-2">
-            <a href="index.php" class="btn btn-danger">Back</a>
+            <a href="hotellist.php" class="btn btn-danger">Back</a>
             <a href="add_admin.php" class="btn btn-primary">Add Admin</a>
           </div>
           
