@@ -61,7 +61,7 @@
 
                                     <div class="action-buttons">
 
-                                        <a href="hotel_edit.php?id=<?= $DataList['id']; ?>"
+                                        <a href="edit_hotel.php?id=<?= $DataList['id']; ?>"
                                            class="btn btn-success btn-sm">
                                             Edit
                                         </a>
