@@ -24,16 +24,14 @@ $row = $result->fetch_assoc();
           
           <!-- Left side: hotel info -->
           <div>
-            <h4 class="card-title mb-1"><?php echo $row['name']; ?></h4>
+            <h1 class="card-title mb-1"><?php echo $row['name']; ?></h1>
             <p class="card-text mb-0"><?php echo $row['address']; ?>, <strong><?php echo $row['code']; ?></strong></p>
           </div>
           
           <!-- Right side: buttons -->
           <div class="d-flex gap-2">
             <a href="hotellist.php" class="btn btn-danger">Back</a>
-            <a href="add_admin.php" class="btn btn-primary">Add Admin</a>
           </div>
-          
         </div>
       </div>
     </div>
