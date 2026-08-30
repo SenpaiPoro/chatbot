@@ -1,60 +1,218 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll('.card').forEach(function(card) {
+    // Get all cards
+    const cards = document.querySelectorAll(".card");
 
-    const editCard = card.querySelector('.edit-card');
-    const title = card.querySelector('.editable-title');
-    const text = card.querySelector('.editable-text');
-    const button = card.querySelector('.edit-button');
+    cards.forEach(function (card) {
 
-    editCard.addEventListener('click', function(e) {
+        // Get elements inside the current card
+        const editCard = card.querySelector(".edit-card");
+        const title = card.querySelector(".editable-title");
+        const text = card.querySelector(".editable-text");
+        const button = card.querySelector(".edit-button");
 
-        e.preventDefault();
+        // Get the database ID
+        const hotelId = card.dataset.id;
 
-        // Make title editable
-        title.contentEditable = true;
 
-        // Make description editable
-        text.contentEditable = true;
+        // ==========================================
+        // CLICK IMAGE / CARD TO ENABLE EDITING
+        // ==========================================
 
-        // Add visual indication
-        title.classList.add('border', 'border-primary', 'p-2');
-        text.classList.add('border', 'border-primary', 'p-2');
+        editCard.addEventListener("click", function (event) {
 
-        // Change button
-        button.textContent = 'Save';
+            event.preventDefault();
 
-        // Change button behavior
-        button.classList.remove('btn-primary');
-        button.classList.add('btn-success');
+            // Make title editable
+            title.contentEditable = "true";
 
-    });
+            // Make description editable
+            text.contentEditable = "true";
 
-    button.addEventListener('click', function(e) {
+            // Add Bootstrap styling
+            title.classList.add(
+                "border",
+                "border-primary",
+                "rounded",
+                "p-2"
+            );
 
-        e.preventDefault();
+            text.classList.add(
+                "border",
+                "border-primary",
+                "rounded",
+                "p-2"
+            );
 
-        if (button.textContent === 'Save') {
+            // Change button from Read More → Save
+            button.textContent = "Save";
 
+            // Change button color
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-success");
+
+            // Focus on title
+            title.focus();
+
+        });
+
+
+        // ==========================================
+        // CLICK SAVE BUTTON
+        // ==========================================
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            // Only execute when button says Save
+            if (button.textContent.trim() !== "Save") {
+                return;
+            }
+
+            // Get updated values
             const newTitle = title.innerText.trim();
-            const newText = text.innerText.trim();
+            const newDescription = text.innerText.trim();
 
-            console.log("Title:", newTitle);
-            console.log("Description:", newText);
 
-            // Make read-only
-            title.contentEditable = false;
-            text.contentEditable = false;
+            // ==========================================
+            // BASIC VALIDATION
+            // ==========================================
 
-            title.classList.remove('border', 'border-primary', 'p-2');
-            text.classList.remove('border', 'border-primary', 'p-2');
+            if (newTitle === "") {
+                alert("Please enter a title.");
+                title.focus();
+                return;
+            }
 
-            // Change button back
-            button.textContent = 'Read more →';
+            if (newDescription === "") {
+                alert("Please enter a description.");
+                text.focus();
+                return;
+            }
 
-            button.classList.remove('btn-success');
-            button.classList.add('btn-primary');
 
-        }
+            // ==========================================
+            // DISABLE BUTTON WHILE SAVING
+            // ==========================================
+
+            button.disabled = true;
+            button.textContent = "Saving...";
+
+
+            // ==========================================
+            // SEND DATA TO PHP
+            // ==========================================
+
+            fetch("update_hotel.php", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/x-www-form-urlencoded"
+                },
+
+                body: new URLSearchParams({
+
+                    id: hotelId,
+
+                    title: newTitle,
+
+                    description: newDescription
+
+                })
+
+            })
+
+
+            // ==========================================
+            // GET PHP RESPONSE
+            // ==========================================
+
+            .then(function (response) {
+
+                if (!response.ok) {
+                    throw new Error(
+                        "Server returned an error."
+                    );
+                }
+
+                return response.text();
+
+            })
+
+
+            // ==========================================
+            // HANDLE RESULT
+            // ==========================================
+
+            .then(function (data) {
+
+                console.log("Server response:", data);
+
+                // Show success message
+                alert("Hotel details successfully updated!");
+
+
+                // ==========================================
+                // DISABLE EDITING
+                // ==========================================
+
+                title.contentEditable = "false";
+
+                text.contentEditable = "false";
+
+
+                // Remove Bootstrap editing styles
+                title.classList.remove(
+                    "border",
+                    "border-primary",
+                    "rounded",
+                    "p-2"
+                );
+
+                text.classList.remove(
+                    "border",
+                    "border-primary",
+                    "rounded",
+                    "p-2"
+                );
+
+
+                // Change button back
+                button.textContent = "Read more →";
+
+                button.classList.remove("btn-success");
+                button.classList.add("btn-primary");
+
+                button.disabled = false;
+
+            })
+
+
+            // ==========================================
+            // HANDLE ERROR
+            // ==========================================
+
+            .catch(function (error) {
+
+                console.error(
+                    "Error updating hotel:",
+                    error
+                );
+
+                alert(
+                    "Something went wrong while saving."
+                );
+
+                // Restore button
+                button.textContent = "Save";
+                button.disabled = false;
+
+            });
+
+        });
 
     });
 

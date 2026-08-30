@@ -8,6 +8,5 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="js/script2.js"></script>
-
     </body>
 </html>
