@@ -43,7 +43,7 @@ $row = $result->fetch_assoc();
                 <!-- Blog entries-->
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
-      <div class="card mb-4" data-id="<?= $row['id']; ?>">
+      <div class="card mb-4" data-id="<?= htmlspecialchars($row['id']); ?>">
 
     <a href="#" class="edit-card">
 
@@ -62,11 +62,9 @@ $row = $result->fetch_assoc();
         </div>
 
         <h2 class="card-title editable-title">
-            <?= htmlspecialchars($row['title']); ?>
         </h2>
 
         <p class="card-text editable-text">
-            <?= htmlspecialchars($row['description']); ?>
         </p>
 
         <a href="#" class="btn btn-primary edit-button">

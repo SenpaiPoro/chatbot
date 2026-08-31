@@ -201,11 +201,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Error updating hotel:",
                     error
                 );
-
                 alert(
                     "Something went wrong while saving."
                 );
-
                 // Restore button
                 button.textContent = "Save";
                 button.disabled = false;
