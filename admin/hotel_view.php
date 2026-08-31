@@ -43,16 +43,14 @@ $row = $result->fetch_assoc();
                 <!-- Blog entries-->
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
-      <div class="card mb-4" data-id="<?= htmlspecialchars($row['id']); ?>">
+                    <div class="card mb-4" data-id="<?= $row['id']; ?>">
 
-    <a href="#" class="edit-card">
-
+    <a href="#!">
         <img
             class="card-img-top"
             src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg"
             alt="..."
         >
-
     </a>
 
     <div class="card-body">
@@ -61,18 +59,19 @@ $row = $result->fetch_assoc();
             January 1, 2023
         </div>
 
-        <h2 class="card-title editable-title">
+        <h2 class="card-title">
+            <?= htmlspecialchars($row['name']); ?>
         </h2>
 
-        <p class="card-text editable-text">
+        <p class="card-text editable-description">
+            <?= htmlspecialchars($row['name']); ?>
         </p>
 
-        <a href="#" class="btn btn-primary edit-button">
+        <button type="button" class="btn btn-primary edit-button">
             Read more →
-        </a>
+        </button>
 
     </div>
-
 </div>
                     <!-- Nested row for non-featured blog posts-->
                     <div class="row">
