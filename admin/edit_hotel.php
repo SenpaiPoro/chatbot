@@ -13,7 +13,7 @@ $hotelId = (int) $paramResult;
 
 
 // Get existing hotel information
-$sql = "SELECT id, name, description, address, price
+$sql = "SELECT *
         FROM hotels
         WHERE id = ?";
 
