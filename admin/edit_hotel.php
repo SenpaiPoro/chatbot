@@ -33,6 +33,23 @@ if ($result->num_rows === 0) {
 
 $hotel = $result->fetch_assoc();
 
+if ($hotel) {
+    $hotelcode = $hotel['code'];
+
+    $sql = "SELECT *
+        FROM hotel_info
+        WHERE code = ?";
+
+    $stmt = $connection->prepare($sql);
+
+    $stmt->bind_param("s", $hotelcode);
+
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+}
+    $hotel_info = $result->fetch_assoc();
+
 ?>
 
 <!-- Page Content -->
@@ -109,7 +126,7 @@ $hotel = $result->fetch_assoc();
                             name="description"
                             rows="6"
                             required
-                        ><?= htmlspecialchars($hotel['description']); ?></textarea>
+                        ><?= htmlspecialchars($hotel_info['description']); ?></textarea>
 
                     </div>
 
@@ -145,7 +162,7 @@ $hotel = $result->fetch_assoc();
                             class="form-control"
                             id="price"
                             name="price"
-                            value="<?= htmlspecialchars($hotel['price']); ?>"
+                            value=""
                             step="0.01"
                             required
                         >
