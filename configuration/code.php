@@ -45,4 +45,8 @@ if(isset($_POST['add_hotel'])){
             }
 }
 
+
+
+
+
 ?>
