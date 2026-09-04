@@ -45,8 +45,57 @@ if(isset($_POST['add_hotel'])){
             }
 }
 
+if (isset($_POST['update'])) {
 
+    $id = $_POST['id'] ?? '';
+    $name = trim($_POST['name'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    $address = trim($_POST['address'] ?? '');
+    $price = $_POST['price'] ?? '';
 
-
+    // Validate ID
+    if (!is_numeric($id)) {
+        die("Invalid hotel ID.");
+    }
+    $id = (int) $id;
+    // Validate required fields
+    if (
+        $name === '' ||
+        $description === '' ||
+        $address === '' ||
+        $price === ''
+    ) {
+        die("Please complete all fields.");
+    }
+    // Update hotel
+    $sql = "UPDATE hotels
+            SET name = ?,
+                description = ?,
+                address = ?,
+                price = ?
+            WHERE id = ?";
+    $stmt = $connection->prepare($sql);
+    if (!$stmt) {
+        die("Prepare failed: " . $connection->error);
+    }
+    // s = string
+    // d = decimal
+    // i = integer
+    $stmt->bind_param(
+        "sssdi",
+        $name,
+        $description,
+        $address,
+        $price,
+        $id
+    );
+    if ($stmt->execute()) {
+        // Redirect after successful update
+        header("Location: hotellist.php?success=1");
+        exit;
+    } else {
+        die("Failed to update hotel: " . $stmt->error);
+    }
+}
 
 ?>
