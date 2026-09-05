@@ -150,7 +150,7 @@ if ($hotel) {
                     </div>
 
 
-                    <!-- Price -->
+                    <!-- Contact NUmber -->
                     <div class="mb-3">
 
                         <label for="price" class="form-label">
@@ -168,7 +168,24 @@ if ($hotel) {
                         >
 
                     </div>
+                    <!-- Email Address -->
+                    <div class="mb-3">
 
+                        <label for="price" class="form-label">
+                            <strong>Email Address</strong>
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            value=""
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
 
                     <!-- Buttons -->
                     <div class="d-flex justify-content-end gap-2">
