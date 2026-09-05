@@ -154,7 +154,7 @@ if ($hotel) {
                     <div class="mb-3">
 
                         <label for="price" class="form-label">
-                            <strong>Price</strong>
+                            <strong>Contact Number</strong>
                         </label>
 
                         <input
