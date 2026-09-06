@@ -60,7 +60,8 @@ if (isset($_POST['update'])) {
         die("Invalid hotel ID.");
     }
     $id = (int) $id;
-    // Validate required fields
+    
+    // Update hotel
     $sql = "UPDATE hotel_info
             SET name = ?,
                 description = ?,
