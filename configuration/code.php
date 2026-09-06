@@ -63,11 +63,11 @@ if (isset($_POST['update'])) {
     
     // Update hotel
     $sql = "UPDATE hotel_info
-            SET name = ?,
+            SET 
                 description = ?,
-                address = ?,
-                contact = ?
-            WHERE id = ?";
+                contact = ?,
+                email = ?,
+            WHERE code = ?";
     $stmt = $connection->prepare($sql);
     if (!$stmt) {
         die("Prepare failed: " . $connection->error);
