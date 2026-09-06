@@ -174,7 +174,6 @@ if ($hotel) {
                         <label for="price" class="form-label">
                             <strong>Email Address</strong>
                         </label>
-
                         <input
                             type="email"
                             class="form-control"
@@ -184,19 +183,15 @@ if ($hotel) {
                             step="0.01"
                             required
                         >
-
                     </div>
-
                     <!-- Buttons -->
                     <div class="d-flex justify-content-end gap-2">
-
                         <a
                             href="hotellist.php"
                             class="btn btn-secondary"
                         >
                             Cancel
                         </a>
-
                         <button
                             type="submit"
                             name="update"

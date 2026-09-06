@@ -53,7 +53,7 @@ if (isset($_POST['update'])) {
     $name = trim($_POST['name'] ?? '');
     $description = trim($_POST['description'] ?? '');
     $address = trim($_POST['address'] ?? '');
-    $price = $_POST['price'] ?? '';
+    $contact = trim($_POST['contact'] ?? '');
 
     // Validate ID
     if (!is_numeric($id)) {
@@ -65,16 +65,16 @@ if (isset($_POST['update'])) {
         $name === '' ||
         $description === '' ||
         $address === '' ||
-        $price === ''
+        $contact === ''
     ) {
         die("Please complete all fields.");
     }
     // Update hotel
-    $sql = "UPDATE hotels
+    $sql = "UPDATE hotel_info
             SET name = ?,
                 description = ?,
                 address = ?,
-                price = ?
+                contact = ?
             WHERE id = ?";
     $stmt = $connection->prepare($sql);
     if (!$stmt) {
@@ -88,7 +88,7 @@ if (isset($_POST['update'])) {
         $name,
         $description,
         $address,
-        $price,
+        $contact,
         $id
     );
     if ($stmt->execute()) {
