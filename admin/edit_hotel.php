@@ -127,17 +127,12 @@ if ($hotel) {
                             rows="6"
                             required
                         ><?= htmlspecialchars($hotel_info['description']); ?></textarea>
-
                     </div>
-
-
                     <!-- Address -->
                     <div class="mb-3">
-
                         <label for="address" class="form-label">
                             <strong>Address</strong>
                         </label>
-
                         <input
                             type="text"
                             class="form-control"

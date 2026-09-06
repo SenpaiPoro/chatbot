@@ -61,15 +61,6 @@ if (isset($_POST['update'])) {
     }
     $id = (int) $id;
     // Validate required fields
-    if (
-        $name === '' ||
-        $description === '' ||
-        $address === '' ||
-        $contact === ''
-    ) {
-        die("Please complete all fields.");
-    }
-    // Update hotel
     $sql = "UPDATE hotel_info
             SET name = ?,
                 description = ?,
