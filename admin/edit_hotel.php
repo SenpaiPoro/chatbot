@@ -84,7 +84,7 @@ if ($hotel) {
 
             <div class="card-body">
 
-                <form action="update_hotel.php" method="POST">
+                <form action="../configuration/code.php" method="POST">
 
                     <!-- Hotel ID -->
                     <input
