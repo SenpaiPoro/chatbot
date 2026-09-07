@@ -141,7 +141,7 @@ if ($hotel) {
                             class="form-control"
                             id="contact_number"
                             name="contact_number"
-                            value="<?= htmlspecialchars($hotel['contact']); ?>"
+                            value="<?= htmlspecialchars($hotel_info['contact']); ?>"
                             step="0.01"
                             required
                         >
@@ -158,7 +158,7 @@ if ($hotel) {
                             class="form-control"
                             id="email"
                             name="email"
-                            value="<?= htmlspecialchars($hotel['email']); ?>"
+                            value="<?= htmlspecialchars($hotel_info['email']); ?>"
                             step="0.01"
                             required
                         >
