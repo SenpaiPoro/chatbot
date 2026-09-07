@@ -8,48 +8,32 @@ $paramResult = checkId('id');
 if ($paramResult === null) {
     die("Hotel ID not found.");
 }
-
 $hotelId = (int) $paramResult;
-
-
 // Get existing hotel information
 $sql = "SELECT *
         FROM hotels
         WHERE id = ?";
-
 $stmt = $connection->prepare($sql);
-
 $stmt->bind_param("i", $hotelId);
-
 $stmt->execute();
-
 $result = $stmt->get_result();
-
-
 // Check if hotel exists
 if ($result->num_rows === 0) {
     die("Hotel not found.");
 }
-
 $hotel = $result->fetch_assoc();
-
 if ($hotel) {
     $hotelcode = $hotel['code'];
 
     $sql = "SELECT *
         FROM hotel_info
         WHERE code = ?";
-
     $stmt = $connection->prepare($sql);
-
     $stmt->bind_param("s", $hotelcode);
-
     $stmt->execute();
-
     $result = $stmt->get_result();
 }
     $hotel_info = $result->fetch_assoc();
-
 ?>
 
 <!-- Page Content -->
@@ -148,16 +132,16 @@ if ($hotel) {
                     <!-- Contact NUmber -->
                     <div class="mb-3">
 
-                        <label for="price" class="form-label">
+                        <label for="contact_number" class="form-label">
                             <strong>Contact Number</strong>
                         </label>
 
                         <input
                             type="number"
                             class="form-control"
-                            id="price"
-                            name="price"
-                            value=""
+                            id="contact_number"
+                            name="contact_number"
+                            value="<?= htmlspecialchars($hotel['contact']); ?>"
                             step="0.01"
                             required
                         >
@@ -166,7 +150,7 @@ if ($hotel) {
                     <!-- Email Address -->
                     <div class="mb-3">
 
-                        <label for="price" class="form-label">
+                        <label for="email" class="form-label">
                             <strong>Email Address</strong>
                         </label>
                         <input
@@ -174,7 +158,7 @@ if ($hotel) {
                             class="form-control"
                             id="email"
                             name="email"
-                            value=""
+                            value="<?= htmlspecialchars($hotel['email']); ?>"
                             step="0.01"
                             required
                         >
