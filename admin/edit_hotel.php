@@ -59,7 +59,6 @@ if ($hotel) {
                 </div>
 
             </div>
-
         </div>
 
 
@@ -91,6 +90,15 @@ if ($hotel) {
                             id="name"
                             name="name"
                             value="<?= htmlspecialchars($hotel['name']); ?>"
+                            required
+                        >
+
+                        <input
+                            type="hidden"
+                            class="form-control"
+                            id="code"
+                            name="code"
+                            value="<?= htmlspecialchars($hotel['code']); ?>"
                             required
                         >
 
