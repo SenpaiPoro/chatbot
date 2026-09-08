@@ -21,13 +21,11 @@ $row = $result->fetch_assoc();
       <div class="card-body">
         <!-- Flex container: left info + right buttons -->
         <div class="d-flex justify-content-between align-items-center">
-          
           <!-- Left side: hotel info -->
           <div>
             <h1 class="card-title mb-1"><?php echo $row['name']; ?></h1>
             <p class="card-text mb-0"><?php echo $row['address']; ?>, <strong><?php echo $row['code']; ?></strong></p>
           </div>
-          
           <!-- Right side: buttons -->
           <div class="d-flex gap-2">
             <a href="edit_hotel.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>

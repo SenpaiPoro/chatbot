@@ -173,7 +173,7 @@ if ($hotel) {
                         </a>
                         <button
                             type="submit"
-                            name="update"
+                            name="update_hotel"
                             class="btn btn-primary"
                         >
                             Update Hotel

@@ -47,7 +47,7 @@ if(isset($_POST['add_hotel'])){
 }
 
 
-if (isset($_POST['update'])) {
+if (isset($_POST['update_hotel'])) {
 
     $id = $_POST['id'] ?? '';
     $name = trim($_POST['name'] ?? '');
