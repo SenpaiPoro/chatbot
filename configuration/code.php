@@ -54,6 +54,7 @@ if (isset($_POST['update_hotel'])) {
     $description = trim($_POST['description'] ?? '');
     $address = trim($_POST['address'] ?? '');
     $contact = trim($_POST['contact'] ?? '');
+    $code = trim($_POST['code'] ?? '');
 
     // Validate ID
     if (!is_numeric($id)) {
@@ -66,7 +67,7 @@ if (isset($_POST['update_hotel'])) {
                 description = ?,
                 contact = ?,
                 email = ?,
-            WHERE code = ?";
+            WHERE code = $code";
     $stmt = $connection->prepare($sql);
     if (!$stmt) {
         die("Prepare failed: " . $connection->error);
