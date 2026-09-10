@@ -62,34 +62,28 @@ if (isset($_POST['update_hotel'])) {
     }
     $id = (int) $id;
     // Update hotel
-    $sql = "UPDATE hotel_info
-            SET 
-                description = ?,
-                contact = ?,
-                email = ?
-            WHERE code = $code";
-    $stmt = $connection->prepare($sql);
-    if (!$stmt) {
-        die("Prepare failed: " . $connection->error);
-    }
-    // s = string
-    // d = decimal
-    // i = integer
-    $stmt->bind_param(
-        "sssdi",
-        $name,
-        $description,
-        $address,
-        $contact,
-        $id
-    );
-    if ($stmt->execute()) {
-        // Redirect after successful update
-        header("Location: hotellist.php?success=1");
-        exit;
-    } else {
-        die("Failed to update hotel: " . $stmt->error);
-    }
+  $sql = "UPDATE hotel_info
+        SET 
+            description = ?,
+            contact = ?,
+            email = ?
+        WHERE code = ?";
+
+$stmt = $connection->prepare($sql);
+
+if (!$stmt) {
+    die("Prepare failed: " . $connection->error);
+}
+
+$stmt->bind_param("ssss", $description, $contact, $email, $code);
+
+if ($stmt->execute()) {
+    echo "Hotel updated successfully.";
+} else {
+    echo "Update failed: " . $stmt->error;
+}
+
+$stmt->close();
 }
 
 ?>
