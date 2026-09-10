@@ -66,7 +66,7 @@ if (isset($_POST['update_hotel'])) {
             SET 
                 description = ?,
                 contact = ?,
-                email = ?,
+                email = ?
             WHERE code = $code";
     $stmt = $connection->prepare($sql);
     if (!$stmt) {
