@@ -78,9 +78,9 @@ if (!$stmt) {
 $stmt->bind_param("ssss", $description, $contact, $email, $code);
 
 if ($stmt->execute()) {
-    echo "Hotel updated successfully.";
+            echo '<script>alert("Hotel updated successfully."); window.location.href = "../admin/edit_hotel.php?id=' . $id . '";</script>';
 } else {
-    echo "Update failed: " . $stmt->error;
+    echo '<script>alert("Failed to update hotel."); window.location.href = "../admin/hotellist.php";</script>';
 }
 
 $stmt->close();
