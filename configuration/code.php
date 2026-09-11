@@ -55,6 +55,7 @@ if (isset($_POST['update_hotel'])) {
     $address = trim($_POST['address'] ?? '');
     $contact = trim($_POST['contact_number'] ?? '');
     $code = trim($_POST['code'] ?? '');
+    $email = trim($_POST['email'] ?? '');   
 
     // Validate ID
     if (!is_numeric($id)) {
