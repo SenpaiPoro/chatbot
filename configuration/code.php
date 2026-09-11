@@ -53,7 +53,7 @@ if (isset($_POST['update_hotel'])) {
     $name = trim($_POST['name'] ?? '');
     $description = trim($_POST['description'] ?? '');
     $address = trim($_POST['address'] ?? '');
-    $contact = trim($_POST['contact'] ?? '');
+    $contact = trim($_POST['contact_number'] ?? '');
     $code = trim($_POST['code'] ?? '');
 
     // Validate ID
