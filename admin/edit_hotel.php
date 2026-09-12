@@ -135,15 +135,11 @@ if ($hotel) {
                         >
 
                     </div>
-
-
                     <!-- Contact NUmber -->
                     <div class="mb-3">
-
                         <label for="contact_number" class="form-label">
                             <strong>Contact Number</strong>
                         </label>
-
                         <input
                             type="number"
                             class="form-control"
@@ -153,11 +149,9 @@ if ($hotel) {
                             step="0.01"
                             required
                         >
-
                     </div>
                     <!-- Email Address -->
                     <div class="mb-3">
-
                         <label for="email" class="form-label">
                             <strong>Email Address</strong>
                         </label>

@@ -7,7 +7,6 @@ $paramResult = checkId('id');
 if ($paramResult === null) {
     die('Hotel ID not found.');
 }
-
 $sql = "SELECT *
         FROM hotels
         INNER JOIN hotel_info ON hotels.code = hotel_info.code
