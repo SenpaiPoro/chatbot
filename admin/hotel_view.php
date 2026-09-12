@@ -10,9 +10,9 @@ if ($paramResult === null) {
 
 $sql = "SELECT *
         FROM hotels
+        INNER JOIN hotel_info ON hotels.code = hotel_info.code
         WHERE id = $paramResult";
 $result = mysqli_query($connection, $sql);
-
 $row = $result->fetch_assoc();
 
 ?><div class="row">
