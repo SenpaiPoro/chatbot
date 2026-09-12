@@ -54,23 +54,12 @@ $row = $result->fetch_assoc();
     </a>
 
     <div class="card-body">
-
-        <div class="small text-muted">
-            January 1, 2023
-        </div>
-
         <h2 class="card-title">
             <?= htmlspecialchars($row['name']); ?>
         </h2>
-
         <p class="card-text editable-description">
-            <?= htmlspecialchars($row['name']); ?>
+            <?= htmlspecialchars($row['description']); ?>
         </p>
-
-        <button type="button" class="btn btn-primary edit-button">
-            Read more →
-        </button>
-
     </div>
 </div>
                     <!-- Nested row for non-featured blog posts-->
