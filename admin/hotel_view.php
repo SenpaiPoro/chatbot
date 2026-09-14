@@ -111,7 +111,7 @@ $row = $result->fetch_assoc();
                     <div class="card mb-2 text-center">
                         <div class="card-header"><b>MANAGE HOTEL ROOMS</b></div>
                         <div class="card-body">
-                            <a class="form-control" href="hotel_rooms/rooms.php">Manage Hotel Rooms</a>
+                            <a class="form-control" href="hotel_rooms.php">Manage Hotel Rooms</a>
                         </div>
                         <p>hotel rooms list</p>
                     </div>
