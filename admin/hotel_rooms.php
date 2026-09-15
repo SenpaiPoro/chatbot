@@ -21,9 +21,21 @@
 <body>
 
 <div class="container py-4">
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                <h4 class="mb-0">
+                    <strong>Hotel Rooms information</strong>
+                </h4>
+                <div class="d-flex gap-2">
 
+                    <a href="hotel_view.php" class="btn btn-danger">
+                        Back
+                    </a>
+                </div>
+            </div>
+        </div>
     <form>
-
         <!-- Full Name -->
         <div class="mb-3">
             <label for="fullName" class="form-label">
@@ -37,13 +49,11 @@
                 name="full_name"
             >
         </div>
-
         <!-- Email -->
         <div class="mb-3">
             <label for="email" class="form-label">
                 Email Address
             </label>
-
             <input
                 type="email"
                 class="form-control custom-input"
@@ -51,13 +61,11 @@
                 name="email"
             >
         </div>
-
         <!-- Phone -->
         <div class="mb-3">
             <label for="phone" class="form-label">
                 Phone Number
             </label>
-
             <input
                 type="text"
                 class="form-control custom-input"
@@ -65,8 +73,6 @@
                 name="phone"
             >
         </div>
-
-
         <!-- Plan + Billing Interval -->
         <div class="row">
 
@@ -74,7 +80,6 @@
                 <label for="plan" class="form-label">
                     Plan
                 </label>
-
                 <input
                     type="text"
                     class="form-control custom-input"
@@ -82,12 +87,10 @@
                     name="plan"
                 >
             </div>
-
             <div class="col-md-6 mb-3">
                 <label for="billing" class="form-label">
                     Billing Interval
                 </label>
-
                 <select
                     class="form-select custom-input"
                     id="billing"
@@ -97,16 +100,12 @@
                     <option>Yearly</option>
                 </select>
             </div>
-
         </div>
-
-
         <!-- Street Address -->
         <div class="mb-3">
             <label for="address" class="form-label">
                 Street Address
             </label>
-
             <input
                 type="text"
                 class="form-control custom-input"
@@ -114,16 +113,12 @@
                 name="address"
             >
         </div>
-
-
         <!-- City + Province -->
         <div class="row">
-
             <div class="col-md-6 mb-3">
                 <label for="city" class="form-label">
                     City
                 </label>
-
                 <input
                     type="text"
                     class="form-control custom-input"
@@ -131,12 +126,10 @@
                     name="city"
                 >
             </div>
-
             <div class="col-md-6 mb-3">
                 <label for="province" class="form-label">
                     Province
                 </label>
-
                 <select
                     class="form-select custom-input"
                     id="province"
@@ -149,18 +142,13 @@
                     <option>Rizal</option>
                 </select>
             </div>
-
         </div>
-
-
         <!-- ZIP + Country -->
         <div class="row">
-
             <div class="col-md-6 mb-3">
                 <label for="zip" class="form-label">
                     ZIP/Postal Code
                 </label>
-
                 <input
                     type="text"
                     class="form-control custom-input"
@@ -168,12 +156,10 @@
                     name="zip"
                 >
             </div>
-
             <div class="col-md-6 mb-3">
                 <label for="country" class="form-label">
                     Country
                 </label>
-
                 <select
                     class="form-select custom-input"
                     id="country"
@@ -185,18 +171,13 @@
                     <option>Japan</option>
                 </select>
             </div>
-
         </div>
-
-
         <!-- Password + Confirm Password -->
         <div class="row">
-
             <div class="col-md-6 mb-3">
                 <label for="password" class="form-label">
                     Password
                 </label>
-
                 <input
                     type="password"
                     class="form-control custom-input"
@@ -204,7 +185,6 @@
                     name="password"
                 >
             </div>
-
             <div class="col-md-6 mb-3">
                 <label for="confirmPassword" class="form-label">
                     Confirm Password
@@ -217,13 +197,9 @@
                     name="confirm_password"
                 >
             </div>
-
         </div>
-
-
         <!-- Buttons -->
         <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
-
             <button
                 type="button"
                 class="btn btn-cancel"
@@ -237,11 +213,8 @@
             >
                 UPDATE
             </button>
-
         </div>
-
     </form>
-
 </div>
 
 </body>
