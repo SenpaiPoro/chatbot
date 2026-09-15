@@ -36,86 +36,20 @@
             </div>
         </div>
     <form>
-        <!-- Full Name -->
-        <div class="mb-3">
-            <label for="fullName" class="form-label">
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                class="form-control custom-input"
-                id="fullName"
-                name="full_name"
-            >
-        </div>
-        <!-- Email -->
-        <div class="mb-3">
-            <label for="email" class="form-label">
-                Email Address
-            </label>
-            <input
-                type="email"
-                class="form-control custom-input"
-                id="email"
-                name="email"
-            >
-        </div>
-        <!-- Phone -->
-        <div class="mb-3">
-            <label for="phone" class="form-label">
-                Phone Number
-            </label>
-            <input
-                type="text"
-                class="form-control custom-input"
-                id="phone"
-                name="phone"
-            >
-        </div>
-        <!-- Plan + Billing Interval -->
         <div class="row">
-
+            
             <div class="col-md-6 mb-3">
-                <label for="plan" class="form-label">
-                    Plan
-                </label>
-                <input
-                    type="text"
-                    class="form-control custom-input"
-                    id="plan"
-                    name="plan"
-                >
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="billing" class="form-label">
-                    Billing Interval
-                </label>
                 <select
                     class="form-select custom-input"
-                    id="billing"
-                    name="billing"
+                    id="province"
+                    name="province"
                 >
-                    <option selected>Monthly</option>
-                    <option>Yearly</option>
+                    <option selected>Ontario</option>
+                    <option>Manila</option>
+                    <option>Cebu</option>
+                    <option>Laguna</option>
+                    <option>Rizal</option>
                 </select>
-            </div>
-        </div>
-        <!-- Street Address -->
-        <div class="mb-3">
-            <label for="address" class="form-label">
-                Street Address
-            </label>
-            <input
-                type="text"
-                class="form-control custom-input"
-                id="address"
-                name="address"
-            >
-        </div>
-        <!-- City + Province -->
-        <div class="row">
-            <div class="col-md-6 mb-3">
                 <label for="city" class="form-label">
                     City
                 </label>
@@ -130,17 +64,7 @@
                 <label for="province" class="form-label">
                     Province
                 </label>
-                <select
-                    class="form-select custom-input"
-                    id="province"
-                    name="province"
-                >
-                    <option selected>Ontario</option>
-                    <option>Manila</option>
-                    <option>Cebu</option>
-                    <option>Laguna</option>
-                    <option>Rizal</option>
-                </select>
+                
             </div>
         </div>
         <!-- ZIP + Country -->
@@ -174,29 +98,7 @@
         </div>
         <!-- Password + Confirm Password -->
         <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="password" class="form-label">
-                    Password
-                </label>
-                <input
-                    type="password"
-                    class="form-control custom-input"
-                    id="password"
-                    name="password"
-                >
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="confirmPassword" class="form-label">
-                    Confirm Password
-                </label>
-
-                <input
-                    type="password"
-                    class="form-control custom-input"
-                    id="confirmPassword"
-                    name="confirm_password"
-                >
-            </div>
+          
         </div>
         <!-- Buttons -->
         <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
