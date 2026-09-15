@@ -20,7 +20,7 @@
 
 <body>
 
-<div class="container py-4">
+<div class="container py-6">
     <div class="card">
         <div class="card-header">
             <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
@@ -35,10 +35,15 @@
                 </div>
             </div>
         </div>
-    <form>
 
     <!-- City + Province -->
-    <form>
+    <form  class="py-4 px-lg-5" action="../configuration/code.php" method="POST">
+
+        <input
+            type="hidden"
+            name="id"
+            value="<?= htmlspecialchars($hotel['id']); ?>"
+        >
 
     <!-- Section Title -->
     <div class="mb-3">
