@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Update Information</title>
-
     <!-- Bootstrap 5 -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -427,7 +425,6 @@
         </div>
 
     </div>
-
 
     <!-- Buttons -->
     <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
