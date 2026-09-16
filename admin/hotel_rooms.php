@@ -434,14 +434,14 @@
 
         <button
             type="button"
-            class="btn btn-cancel"
+            class="btn btn-danger"
         >
             CANCEL
         </button>
 
         <button
             type="submit"
-            class="btn btn-update"
+            class="btn btn-info "
         >
             UPDATE
         </button>

@@ -61,7 +61,6 @@ if ($hotel) {
             </div>
         </div>
 
-
         <!-- Form Card -->
         <div class="card shadow-sm mt-4">
 
