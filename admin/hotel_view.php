@@ -40,7 +40,6 @@ $row = $result->fetch_assoc();
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4" data-id="<?= $row['id']; ?>">
-
     <a href="#!">
         <img
             class="card-img-top"
@@ -48,7 +47,6 @@ $row = $result->fetch_assoc();
             alt="..."
         >
     </a>
-
     <div class="card-body">
         <h2 class="card-title">
             <?= htmlspecialchars($row['name']); ?>
@@ -142,5 +140,4 @@ $row = $result->fetch_assoc();
                 </div>
             </div>
         </div>
-
 <?php include 'include/footer.php'; ?>
