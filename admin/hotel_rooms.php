@@ -177,8 +177,6 @@ roomTypeSelect.addEventListener("change", function () {
 
 
     roomRow.dataset.code = code;
-
-
     roomRow.innerHTML = `
 
         <!-- Room Type -->
@@ -197,8 +195,6 @@ roomTypeSelect.addEventListener("change", function () {
             </div>
 
         </div>
-
-
         <!-- Rooms Available -->
         <div class="col-md-2 mb-2 mb-md-0">
 
@@ -210,10 +206,7 @@ roomTypeSelect.addEventListener("change", function () {
                 value="0"
                 placeholder="0"
             >
-
         </div>
-
-
         <!-- Price -->
         <div class="col-md-3">
 
@@ -298,22 +291,13 @@ roomList.addEventListener("click", function (event) {
         SNK1: "SNK1 - Smoking King Suite",
 
         SNQ1: "SNQ1 - Smoking Queen Suite"
-
     };
-
-
     option.value = code;
     option.textContent = roomNames[code];
-
-
     // Put it back into dropdown
     roomTypeSelect.appendChild(option);
-
-
     // Remove row
     roomRow.remove();
-
 });
-
 </script>
 <?php include 'include/footer.php'; ?>
