@@ -144,5 +144,176 @@
 
 </body>
 </html>
+<script>
 
+const roomTypeSelect = document.getElementById("roomTypeSelect");
+const roomList = document.getElementById("roomList");
+
+
+roomTypeSelect.addEventListener("change", function () {
+
+    const selectedOption = roomTypeSelect.options[
+        roomTypeSelect.selectedIndex
+    ];
+
+    const code = selectedOption.value;
+    const roomName = selectedOption.textContent;
+
+
+    // Don't add empty values
+    if (code === "") {
+        return;
+    }
+
+
+    // Create room row
+    const roomRow = document.createElement("div");
+
+    roomRow.classList.add(
+        "row",
+        "align-items-center",
+        "mb-3"
+    );
+
+
+    roomRow.dataset.code = code;
+
+
+    roomRow.innerHTML = `
+
+        <!-- Room Type -->
+        <div class="col-md-7 mb-2 mb-md-0">
+
+            <div class="d-flex align-items-center">
+
+                <div>
+                    <strong>${code}</strong>
+
+                    <span class="text-muted ms-2">
+                        ${roomName.substring(code.length + 3)}
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Rooms Available -->
+        <div class="col-md-2 mb-2 mb-md-0">
+
+            <input
+                type="number"
+                class="form-control"
+                name="rooms_${code}"
+                min="0"
+                value="0"
+                placeholder="0"
+            >
+
+        </div>
+
+
+        <!-- Price -->
+        <div class="col-md-3">
+
+            <div class="input-group">
+
+                <span class="input-group-text">
+                    ₱
+                </span>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    name="price_${code}"
+                    min="0"
+                    step="0.01"
+                    value="0.00"
+                    placeholder="0.00"
+                >
+
+                <button
+                    type="button"
+                    class="btn btn-outline-danger remove-room"
+                    title="Remove room"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    // Add row to page
+    roomList.appendChild(roomRow);
+
+
+    // Remove selected option from dropdown
+    selectedOption.remove();
+
+
+    // Reset dropdown
+    roomTypeSelect.selectedIndex = 0;
+
+});
+
+
+// Remove room
+roomList.addEventListener("click", function (event) {
+
+    if (!event.target.classList.contains("remove-room")) {
+        return;
+    }
+
+
+    const roomRow = event.target.closest(".row");
+
+    const code = roomRow.dataset.code;
+
+
+    // Find original option
+    const option = document.createElement("option");
+
+
+    const roomNames = {
+
+        NK1: "NK1 - Non-Smoking King, 1 bed",
+
+        NK2: "NK2 - Non-Smoking King, 2nd room variation",
+
+        NQ1: "NQ1 - Non-Smoking Queen, 1 bed",
+
+        NQ2: "NQ2 - Non-Smoking Queen, 2 beds",
+
+        ND1: "ND1 - Non-Smoking Double, 1 bed",
+
+        ND2: "ND2 - Non-Smoking Double, 2 beds",
+
+        NT1: "NT1 - Non-Smoking Twin, 1 bed",
+
+        SNK1: "SNK1 - Smoking King Suite",
+
+        SNQ1: "SNQ1 - Smoking Queen Suite"
+
+    };
+
+
+    option.value = code;
+    option.textContent = roomNames[code];
+
+
+    // Put it back into dropdown
+    roomTypeSelect.appendChild(option);
+
+
+    // Remove row
+    roomRow.remove();
+
+});
+
+</script>
 <?php include 'include/footer.php'; ?>
