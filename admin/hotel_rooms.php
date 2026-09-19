@@ -35,31 +35,26 @@
         </div>
 
     <!-- City + Province -->
-    <form>
+    <form method="POST" action="hotel_rooms.php">
+
+    <div class="p-4">
 
     <div class="mb-4">
-
-        <h5 class="mb-0">
+        <h5 class="mb-1">
             <strong>Room Types</strong>
         </h5>
 
         <small class="text-muted">
             Select the room types available in this hotel and set their availability and price.
         </small>
-
     </div>
 
-
-    <!-- Selected Room Types -->
     <div id="roomList">
-
-        <!-- Room rows will appear here -->
-
+        <!-- Room rows appear here -->
     </div>
-
 
     <!-- Add Room Type -->
-    <div class="row align-items-end mb-4">
+    <div class="row align-items-end mt-4">
 
         <div class="col-md-7">
 
@@ -116,8 +111,7 @@
         </div>
 
     </div>
-
-
+    
     <!-- Buttons -->
     <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
 
