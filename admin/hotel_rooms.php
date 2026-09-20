@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Update Information</title>
     <!-- Bootstrap 5 -->
     <link
@@ -15,9 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <div class="container py-6">
     <div class="card">
         <div class="card-header">
@@ -35,7 +32,7 @@
         </div>
 
     <!-- City + Province -->
-    <form method="POST" action="hotel_rooms.php">
+    <form method="POST" action="../configuration/code.php">
 
     <div class="p-4">
 
@@ -123,8 +120,9 @@
         </button>
 
         <button
-            type="submit"
+            type="submit"   
             class="btn btn-info"
+            name="save_rooms"
         >
             SAVE
         </button>
@@ -152,13 +150,10 @@ roomTypeSelect.addEventListener("change", function () {
 
     const code = selectedOption.value;
     const roomName = selectedOption.textContent;
-
-
     // Don't add empty values
     if (code === "") {
         return;
     }
-
 
     // Create room row
     const roomRow = document.createElement("div");
@@ -169,8 +164,6 @@ roomTypeSelect.addEventListener("change", function () {
         "mb-3",
         "py-2"
     );
-
-
     roomRow.dataset.code = code;
     roomRow.innerHTML = `
 
