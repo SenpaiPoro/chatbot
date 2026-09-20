@@ -166,7 +166,8 @@ roomTypeSelect.addEventListener("change", function () {
     roomRow.classList.add(
         "row",
         "align-items-center",
-        "mb-3"
+        "mb-3",
+        "py-2"
     );
 
 
