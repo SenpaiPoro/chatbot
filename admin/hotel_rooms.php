@@ -23,42 +23,32 @@
                     <strong>Hotel Rooms information</strong>
                 </h4>
                 <div class="d-flex gap-2">
-
                     <a href="hotel_view.php" class="btn btn-danger">
                         Back
                     </a>
                 </div>
             </div>
         </div>
-
     <!-- City + Province -->
     <form method="POST" action="../configuration/code.php">
-
     <div class="p-4">
-
     <div class="mb-4">
         <h5 class="mb-1">
             <strong>Room Types</strong>
         </h5>
-
         <small class="text-muted">
             Select the room types available in this hotel and set their availability and price.
         </small>
     </div>
-
     <div id="roomList">
         <!-- Room rows appear here -->
     </div>
-
     <!-- Add Room Type -->
     <div class="row align-items-end mt-4">
-
         <div class="col-md-7">
-
             <label for="roomTypeSelect" class="form-label fw-bold">
                 Add Room Type
             </label>
-
             <select
                 class="form-select"
                 id="roomTypeSelect"
