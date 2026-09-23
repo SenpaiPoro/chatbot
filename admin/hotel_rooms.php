@@ -212,38 +212,25 @@ roomTypeSelect.addEventListener("change", function () {
         </div>
 
     `;
-
-
     // Add row to page
     roomList.appendChild(roomRow);
-
-
     // Remove selected option from dropdown
     selectedOption.remove();
 
-
     // Reset dropdown
     roomTypeSelect.selectedIndex = 0;
-
 });
-
-
 // Remove room
 roomList.addEventListener("click", function (event) {
 
     if (!event.target.classList.contains("remove-room")) {
         return;
     }
-
-
     const roomRow = event.target.closest(".row");
-
     const code = roomRow.dataset.code;
-
 
     // Find original option
     const option = document.createElement("option");
-
 
     const roomNames = {
 
