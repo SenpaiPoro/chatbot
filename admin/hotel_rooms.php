@@ -122,27 +122,21 @@
 </body>
 </html>
 <script>
-
 const roomTypeSelect = document.getElementById("roomTypeSelect");
 const roomList = document.getElementById("roomList");
 
-
 roomTypeSelect.addEventListener("change", function () {
-
     const selectedOption = roomTypeSelect.options[
         roomTypeSelect.selectedIndex
     ];
-
     const code = selectedOption.value;
     const roomName = selectedOption.textContent;
     // Don't add empty values
     if (code === "") {
         return;
     }
-
     // Create room row
     const roomRow = document.createElement("div");
-
     roomRow.classList.add(
         "row",
         "align-items-center",
@@ -151,7 +145,6 @@ roomTypeSelect.addEventListener("change", function () {
     );
     roomRow.dataset.code = code;
     roomRow.innerHTML = `
-
         <!-- Room Type -->
         <div class="col-md-7 mb-2 mb-md-0">
 
@@ -182,13 +175,10 @@ roomTypeSelect.addEventListener("change", function () {
         </div>
         <!-- Price -->
         <div class="col-md-3">
-
             <div class="input-group">
-
                 <span class="input-group-text">
                     ₱
                 </span>
-
                 <input
                     type="number"
                     class="form-control"
@@ -198,7 +188,6 @@ roomTypeSelect.addEventListener("change", function () {
                     value="0.00"
                     placeholder="0.00"
                 >
-
                 <button
                     type="button"
                     class="btn btn-outline-danger remove-room"
@@ -206,11 +195,8 @@ roomTypeSelect.addEventListener("change", function () {
                 >
                     ×
                 </button>
-
             </div>
-
         </div>
-
     `;
     // Add row to page
     roomList.appendChild(roomRow);
