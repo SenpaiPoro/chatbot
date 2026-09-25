@@ -92,23 +92,17 @@
                 <option value="SNQ1">
                     SNQ1 - Smoking Queen Suite
                 </option>
-
             </select>
-
         </div>
-
     </div>
-    
     <!-- Buttons -->
     <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
-
         <button
             type="button"
             class="btn btn-danger"
         >
             CANCEL
         </button>
-
         <button
             type="submit"   
             class="btn btn-info"
