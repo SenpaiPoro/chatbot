@@ -89,7 +89,7 @@ $stmt->close();
 
 
 
-if (isset($_POST['save_room'])) {
+if (isset($_POST['save_rooms'])) {
     $hotel_id = $_POST['hotel_id'] ?? '';
     $room_type = $_POST['room_type'] ?? '';
     $availability = $_POST['availability'] ?? '';
