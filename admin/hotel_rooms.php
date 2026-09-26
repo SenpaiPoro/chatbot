@@ -40,8 +40,6 @@
             Select the room types available in this hotel and set their availability and price.
         </small>
         <input type="hidden" name="hotel_id" value="<?= $_GET['id']; ?>">
-        <input type="hidden" name="code" value="<?= $_GET['code']; ?>">
-
     </div>
     <div id="roomList">
         <!-- Room rows appear here -->
