@@ -23,7 +23,7 @@
                     <strong>Hotel Rooms information</strong>
                 </h4>
                 <div class="d-flex gap-2">
-                    <a href="hotel_view.php" class="btn btn-danger">
+                    <a href="hotel_view.php?id=<?php echo $_GET['id']; ?>" class="btn btn-danger">
                         Back
                     </a>
                 </div>
