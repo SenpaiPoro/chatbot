@@ -101,7 +101,7 @@ if (isset($_POST['save_room'])) {
     }
 
     // Insert room data into the database
-    $stmt = $connection->prepare("INSERT INTO hotel_rooms (hotel_id, room_type, availability, price) VALUES (?, ?, ?, ?)");
+    $stmt = $connection->prepare("INSERT INTO hotel_rooms (hotel_id, code, type, available, price) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("isii", $hotel_id, $room_type, $availability, $price);
 
     if ($stmt->execute()) {
