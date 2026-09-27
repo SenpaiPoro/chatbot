@@ -88,7 +88,6 @@ $stmt->close();
 }
 
 
-
 if (isset($_POST['save_rooms'])) {
     $hotel_id = $_POST['hotel_id'] ?? '';
     $room_type = $_POST['room_type'] ?? '';
@@ -96,7 +95,7 @@ if (isset($_POST['save_rooms'])) {
     $price = $_POST['price'] ?? '';
 
     // Validate inputs
-    if (!is_numeric($hotel_id) || !is_numeric($availability) || !is_numeric($price)) {
+    if (!is_numeric($availability) || !is_numeric($price)) {
         die("Invalid input.");
     }
     // Insert room data into the database
@@ -110,7 +109,5 @@ if (isset($_POST['save_rooms'])) {
     }
     $stmt->close();
 }
-
-
 
 ?>
