@@ -48,7 +48,7 @@
     <div class="row align-items-end mt-4">
         <div class="col-md-7">
             <label for="roomTypeSelect" class="form-label fw-bold">
-                Add Room Type
+                Add Room Type for <?php echo $_GET['code']; ?>
             </label>
             <select
                 class="form-select"
