@@ -99,7 +99,6 @@ if (isset($_POST['save_rooms'])) {
     if (!is_numeric($hotel_id) || !is_numeric($availability) || !is_numeric($price)) {
         die("Invalid input.");
     }
-
     // Insert room data into the database
     $stmt = $connection->prepare("INSERT INTO hotel_rooms (hotel_id, code, type, available, price) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("isii", $hotel_id, $room_type, $availability, $price);
@@ -109,7 +108,6 @@ if (isset($_POST['save_rooms'])) {
     } else {
         echo '<script>alert("Failed to add room."); window.location.href = "../admin/hotel_rooms.php?id=' . $hotel_id . '";</script>';
     }
-
     $stmt->close();
 }
 
